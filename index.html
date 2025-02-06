@@ -1,43 +1,108 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сторінка макет</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.5s ease-in-out;
+        }
+        .show {
+            max-height: 500px;
+        }
+    </style>
 </head>
 <body>
     <h1>Хочеш каву</h1>
     <div class="head-text">
-    <p>заходь до нас</p>
-    <p>меню</p>
+        <p>заходь до нас</p>
+        <p>меню</p>
     </div>
     <section class="info">
         <article class="post">
             <h2>Кава</h2>
             <img class="post-img" src="https://tvoemisto.tv/media/gallery/full/1/4/1451666224_kofe.png" alt="Кава" height="300"/>
             <p class="post-text">Смачна кава прямо до тебе!</p>
-        </article>
-        <article class="post">
-            <h2>Еспресо</h2>
-            <img class="post-img" src="https://i-coffee.me/wp-content/uploads/2021/12/%D1%8D%D1%81%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%BE.jpg" alt="Еспресо" height="300"/>
-            <p class="post-text">Класичний еспресо для справжніх гурманів.</p>
+            <button class="details-btn">Детальніше</button>
+            <div class="details-content">
+                <p>Кава – чудовий напій, що заряджає енергією!</p>
+                <ul>
+                    <li>Еспресо</li>
+                    <li>Американо</li>
+                    <li>Капучино</li>
+                    <li>Лате</li>
+                    <li>Мокачино</li>
+                    <li>Флет Вайт</li>
+                </ul>
+            </div>
         </article>
         <article class="post">
             <h2>Чай</h2>
             <img class="post-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOv3HuU-_XVW8X5Jbeq4lYuoECRFFlK-ngfg&s" alt="Чай" height="300"/>
             <p class="post-text">Заспокійливий чай на будь-який смак.</p>
+            <button class="details-btn">Детальніше</button>
+            <div class="details-content">
+                <p>Різноманіття чаїв</p>
+                <ul>
+                    <li>Зелений</li>
+                    <li>Чорний</li>
+                    <li>Трав'яний</li>
+                    <li>Фруктовий</li>
+                    <li>Молочний улун</li>
+                    <li>Мате</li>
+                </ul>
+            </div>
         </article>
         <article class="post">
-            <h2>Американо</h2>
-            <img class="post-img" src="https://coffee-world.com.ua/wa-data/public/photos/76/35/3576/3576.970.jpg" alt="Американо" height="300"/>
-            <p class="post-text">Міцний американський стиль.</p>
+            <h2>Смаколики</h2>
+            <img class="post-img" src="https://eco-buffet.com/wp-content/uploads/2023/05/vehanskyj-chizkejk_2.jpg" alt="Смаколики" height="300"/>
+            <p class="post-text">Смачно та недорого!</p>
+            <button class="details-btn">Детальніше</button>
+            <div class="details-content">
+                <p>Вибирай свій улюблений смаколик!</p>
+                <ul>
+                    <li>Випічка</li>
+                    <li>Тістечка</li>
+                    <li>Шоколадні десерти</li>
+                    <li>Макаруни</li>
+                    <li>Чізкейк</li>
+                    <li>Мафіни</li>
+                </ul>
+            </div>
         </article>
         <article class="post">
-            <h2>Латте</h2>
-            <img class="post-img" src="https://liliebakery.fr/wp-content/uploads/2024/10/latte-macchiato-recette-facile-lilie-bakery-500x500.jpg" alt="Латте" height="300"/>
-            <p class="post-text">Ніжний смак латте.</p>
+            <h2>Їжа</h2>
+            <img class="post-img" src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/05/delicious-burger-e1558527589911.jpg" alt="Їжа" height="300"/>
+            <p class="post-text">Ситні сніданки, легкі перекуси.</p>
+            <button class="details-btn">Детальніше</button>
+            <div class="details-content">
+                <p>Меню</p>
+                <ul>
+                    <li>Сендвічі</li>
+                    <li>Круасани</li>
+                    <li>Паніні</li>
+                    <li>Салати</li>
+                    <li>Бургери</li>
+                    <li>Тости з авокадо</li>
+                </ul>
+            </div>
         </article>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".details-btn");
+            
+            buttons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const details = this.nextElementSibling;
+                    details.classList.toggle("show");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
