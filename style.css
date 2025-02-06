@@ -11,9 +11,9 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 150px;
+    font-size: 8vw;
     position: relative;
-    top: -50px;
+    top: -2vw;
     opacity: 0.8;
     color: rgb(90, 0, 0);
     transition: font-size 0.5s ease, color 0.5s ease;
@@ -22,24 +22,26 @@ h1 {
 p {
     text-align: center;
     color: rgb(90, 0, 0);
-    font-size: 100px;
+    font-size: 4vw;
     position: relative;
-    top: -30px;
+    top: -1vw;
     transition: font-size 0.5s ease, color 0.5s ease;
 }
-.head-text{
+
+.head-text {
     position: relative;
-    top: -60px;
+    top: -3vw;
 }
+
 h1, p {
-    color: #FFD700; /* Світло-жовтий для контрасту */
-    text-shadow: 3px 3px 5px black; /* Додає тінь для кращої видимості */
-    opacity: 1; /* Повна видимість */
+    color: #FFD700;
+    text-shadow: 0.3vw 0.3vw 0.5vw black;
+    opacity: 1;
     transition: opacity 0.5s ease, color 0.5s ease;
 }
 
 .post-text {
-    font-size: 24px;
+    font-size: 1.8vw;
     text-align: center;
     color: blue;
     transition: color 0.5s ease;
@@ -49,25 +51,25 @@ h1, p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1100px;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 5vw 0;
 }
 
 .post {
-    background: rgb(255,252,0);
     background: linear-gradient(0deg, rgba(255,252,0,1) 28%, rgba(0,18,255,1) 57%);
     color: black;
-    padding: 10px 45px 30px 45px;
-    width: 400px;
-    margin: 20px;
+    padding: 1vw 3vw 2vw 3vw;
+    width: 35%;
+    margin: 2vw;
     position: relative;
-    border-radius: 30px;
-    transition: background 1.5s ease, transform 0.3s ease;
+    top: 3vw;
+    border-radius: 2vw;
+    transition: background 1s ease, transform 1s ease;
+    opacity: 0.9;
 }
 
 .post:hover {
-    background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 28%, rgba(255,0,0,1) 57%);
     transform: scale(1.05);
 }
@@ -75,41 +77,82 @@ h1, p {
 .post-img {
     width: 100%;
     height: auto;
-    border: 2px solid transparent;
-    border-radius: 10px;
+    border: 0.2vw solid transparent;
+    border-radius: 1vw;
     transition: border-width 1s ease, border-color 1s ease, border-radius 1s ease;
 }
 
 .post-img:hover {
-    border: 10px solid black;
-    border-radius: 20px;
+    border: 0.5vw solid black;
+    border-radius: 1.5vw;
 }
 
 h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 3vw;
     position: relative;
-    top: 30px;
+    top: 2vw;
     transition: font-size 0.5s ease;
+}
+
+.details-content {
+    max-height: 0;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.6vw;
+    margin-top: 1vw;
+    background: yellow;
+    padding: 1vw;
+    border-radius: 1vw;
+    transition: max-height 1.5s ease-in-out;
+}
+
+.details-content ul {
+    margin: 1vw 2vw;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.details-btn {
+    display: block;
+    margin: 1vw auto;
+    padding: 0.8vw 1.6vw;
+    font-size: 1.8vw;
+    background-color: blue;
+    color: black;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.details-btn:hover {
+    background-color: yellow;
+    color: blue;
+    transform: scale(1.1);
+}
+
+.show {
+    max-height: 20vw;
 }
 
 /* Адаптивність */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 100px;
+        font-size: 6vw;
     }
 
     p {
-        font-size: 60px;
+        font-size: 3vw;
     }
 
     .post {
         width: 90%;
-        margin: 10px 0;
+        margin: 1vw 0;
     }
 
     .info {
         flex-direction: column;
-        padding: 20px 0;
+        padding: 2vw 0;
     }
 }
