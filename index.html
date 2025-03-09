@@ -1,105 +1,99 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сторінка макет</title>
+    <title>Меню кафе</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .details-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 1.5s ease-in-out;
-        }
-        .show {
-            max-height: 500px;
-        }
-    </style>
 </head>
 <body>
-    <h1>Хочеш каву</h1>
-    <div class="head-text">
-        <p>заходь до нас</p>
-        <p>меню</p>
-    </div>
+
+    <header>
+        <h1>😈 Кав'ярня "Сатана" 🤬</h1>
+        <nav>
+            <ul>
+                <li><a href="#coffee">Кава</a></li>
+                <li><a href="#tea">Чай</a></li>
+                <li><a href="#desserts">Смаколики</a></li>
+                <li><a href="#food">Їжа</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="info">
-        <article class="post">
+        <article class="post" id="coffee">
             <h2>Кава</h2>
-            <img class="post-img" src="https://tvoemisto.tv/media/gallery/full/1/4/1451666224_kofe.png" alt="Кава" height="300"/>
+            <img class="post-img" src="https://tvoemisto.tv/media/gallery/full/1/4/1451666224_kofe.png" alt="Кава"/>
             <p class="post-text">Смачна кава прямо до тебе!</p>
             <button class="details-btn">Детальніше</button>
             <div class="details-content">
-                <p>Кава – чудовий напій, що заряджає енергією!</p>
-                <ul>
-                    <li>Еспресо</li>
-                    <li>Американо</li>
-                    <li>Капучино</li>
-                    <li>Лате</li>
-                    <li>Мокачино</li>
-                    <li>Флет Вайт</li>
-                </ul>
+                <table>
+                    <tr><th>Напій</th><th>Ціна (грн)</th></tr>
+                    <tr><td>Еспресо</td><td>25 грн</td></tr>
+                    <tr><td>Американо</td><td>20 грн</td></tr>
+                    <tr><td>Капучино</td><td>50 грн</td></tr>
+                </table>
             </div>
         </article>
-        <article class="post">
+
+        <article class="post" id="tea">
             <h2>Чай</h2>
-            <img class="post-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOv3HuU-_XVW8X5Jbeq4lYuoECRFFlK-ngfg&s" alt="Чай" height="300"/>
+            <img class="post-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOv3HuU-_XVW8X5Jbeq4lYuoECRFFlK-ngfg&s" alt="Чай"/>
             <p class="post-text">Заспокійливий чай на будь-який смак.</p>
             <button class="details-btn">Детальніше</button>
             <div class="details-content">
-                <p>Різноманіття чаїв</p>
-                <ul>
-                    <li>Зелений</li>
-                    <li>Чорний</li>
-                    <li>Трав'яний</li>
-                    <li>Фруктовий</li>
-                    <li>Молочний улун</li>
-                    <li>Мате</li>
-                </ul>
+                <table>
+                    <tr><th>Чай</th><th>Ціна (грн)</th></tr>
+                    <tr><td>Зелений чай</td><td>40 грн</td></tr>
+                    <tr><td>Чорний чай</td><td>30 грн</td></tr>
+                </table>
             </div>
         </article>
-        <article class="post">
+
+        <article class="post" id="desserts">
             <h2>Смаколики</h2>
-            <img class="post-img" src="https://eco-buffet.com/wp-content/uploads/2023/05/vehanskyj-chizkejk_2.jpg" alt="Смаколики" height="300"/>
+            <img class="post-img" src="https://eco-buffet.com/wp-content/uploads/2023/05/vehanskyj-chizkejk_2.jpg" alt="Смаколики"/>
             <p class="post-text">Смачно та недорого!</p>
             <button class="details-btn">Детальніше</button>
             <div class="details-content">
-                <p>Вибирай свій улюблений смаколик!</p>
-                <ul>
-                    <li>Випічка</li>
-                    <li>Тістечка</li>
-                    <li>Шоколадні десерти</li>
-                    <li>Макаруни</li>
-                    <li>Чізкейк</li>
-                    <li>Мафіни</li>
-                </ul>
+                <table>
+                    <tr><th>Десерт</th><th>Ціна (грн)</th></tr>
+                    <tr><td>Чізкейк</td><td>100 грн</td></tr>
+                    <tr><td>Мафіни</td><td>40 грн</td></tr>
+                </table>
             </div>
         </article>
-        <article class="post">
+
+        <article class="post" id="food">
             <h2>Їжа</h2>
-            <img class="post-img" src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/05/delicious-burger-e1558527589911.jpg" alt="Їжа" height="300"/>
+            <img class="post-img" src="Без_названия-removebg-preview.png" alt="Їжа"/>
             <p class="post-text">Ситні сніданки, легкі перекуси.</p>
             <button class="details-btn">Детальніше</button>
             <div class="details-content">
-                <p>Меню</p>
-                <ul>
-                    <li>Сендвічі</li>
-                    <li>Круасани</li>
-                    <li>Паніні</li>
-                    <li>Салати</li>
-                    <li>Бургери</li>
-                    <li>Тости з авокадо</li>
-                </ul>
+                <table>
+                    <tr><th>Страва</th><th>Ціна (грн)</th></tr>
+                    <tr><td>Сендвічі</td><td>120 грн</td></tr>
+                    <tr><td>Круасани</td><td>50 грн</td></tr>
+                </table>
             </div>
         </article>
     </section>
+
+    <footer>
+        <p>вулиця пушкіна дом калатушкіна</p>
+        <p>номер телефону:               666-666-666</p>
+        <p>номер телефону:               0888-888-888</p>
+        <p>номер телефону:               999-9999</p>
+        <p>номер телефону:               090-4444-4444</p>
+        <p>номер телефону:               1 (207) 404-2604</p>
+    </footer>
+   
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const buttons = document.querySelectorAll(".details-btn");
-            
-            buttons.forEach(button => {
+            document.querySelectorAll(".details-btn").forEach(button => {
                 button.addEventListener("click", function() {
-                    const details = this.nextElementSibling;
-                    details.classList.toggle("show");
+                    this.nextElementSibling.classList.toggle("show");
                 });
             });
         });
